@@ -1,0 +1,1 @@
+{ "type": "tool", "name": "framework-stm32cubeu5", "version": "1.4.0", "spec": {"owner": "brooks", "id": 1, "name": "framework-stm32cubeu5", "requirements": null, "uri": null}}
