@@ -7,6 +7,6 @@
     "st"
   ],
   "name": "framework-stm32cubeu5",
-  "version": "1.4.0",
+  "version": "1.7.0",
   "homepage": "https://github.com/STMicroelectronics/STM32CubeU5"
 }
