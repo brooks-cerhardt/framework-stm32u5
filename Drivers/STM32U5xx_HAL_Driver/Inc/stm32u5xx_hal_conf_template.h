@@ -8,7 +8,6 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2021 STMicroelectronics.
   * Copyright (c) 2021-2023 STMicroelectronics.
   * All rights reserved.
   *
@@ -18,8 +17,6 @@
   *
   ******************************************************************************
   */
-
-/* modified for Platfomio Framework inclusion */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef STM32U5xx_HAL_CONF_H
@@ -36,125 +33,65 @@ extern "C" {
 /**
   * @brief This is the list of modules to be used in the HAL driver
   */
-
-/* Required HAL modules --------------------------------------------------- */
 #define HAL_MODULE_ENABLED
-
-#define HAL_CORTEX_MODULE_ENABLED
-#define HAL_DMA_MODULE_ENABLED
-#define HAL_FLASH_MODULE_ENABLED
-#define HAL_RCC_MODULE_ENABLED
-#define HAL_PWR_MODULE_ENABLED
-
-/* Standard preipheral set ------------------------------------------------ */
-#define HAL_GPIO_MODULE_ENABLED
-#define HAL_TIM_MODULE_ENABLED
-#define HAL_LPTIM_MODULE_ENABLED
-#define HAL_RTC_MODULE_ENABLED
-#define HAL_SPI_MODULE_ENABLED
-#define HAL_UART_MODULE_ENABLED
-#define HAL_USART_MODULE_ENABLED
-#define HAL_RNG_MODULE_ENABLED
-#define HAL_I2C_MODULE_ENABLED
-
-#define HAL_IWDG_MODULE_ENABLED  /* Independent Watchdog */
-#define HAL_WWDG_MODULE_ENABLED   /* Window Watchdog */
-
-/* Performance Enhancement ------------------------------------------------ */
-#define HAL_ICACHE_MODULE_ENABLED
-#define HAL_DCACHE_MODULE_ENABLED
-
-/* setup optional modules ------------------------------------------------- */
-#if !defined( HAL_GTZC_MODULE_DISABLE)
-#define HAL_GTZC_MODULE_ENABLED            /* Global Trust-Zone Controller */
-#endif
-
-#if !defined(HAL_ADC_MODULE_DISABLE)
 #define HAL_ADC_MODULE_ENABLED
-#endif
-
-#if !defined(HAL_COMP_MODULE_DISABLE)
 #define HAL_COMP_MODULE_ENABLED
-#endif
-
-#if !defined(HAL_CORDIC_MODULE_DISABLE)
 #define HAL_CORDIC_MODULE_ENABLED
-#endif
-
-#if !defined(HAL_CRC_MODULE_DISABLE)
+#define HAL_CORTEX_MODULE_ENABLED
 #define HAL_CRC_MODULE_ENABLED
-#endif
-
-#if !defined(HAL_CRYPT_MODULE_DISABLE)
 #define HAL_CRYP_MODULE_ENABLED
-#endif
-
-#if !defined(HAL_DAC_MODULE_DISABLE)
 #define HAL_DAC_MODULE_ENABLED
-#endif
-
-#if !defined(HAL_EXTI_MODULE_DISABLE)
-#define HAL_EXTI_MODULE_ENABLED
-#endif
-
-#if !defined(HAL_FDCAN_MODULE_DISABLE) && !defined(HAL_CAN_MODULE_DISABLE)
-#define HAL_FDCAN_MODULE_ENABLED
-#endif
-
-#if !defined(HAL_FMAC_MODULE_DISABLE)
-#define HAL_FMAC_MODULE_ENABLED
-#endif
-
-#if !defined(HAL_XSPI_MODULE_DISABLE)
-#define HAL_XSPI_MODULE_ENABLED                  /* Hexa SPI */
-#endif
-
-#if !defined(HAL_OSPI_MODULE_DISABLE)
-#define HAL_OSPI_MODULE_ENABLED
-#endif
-
-#if !defined(HAL_MDF_MODULE_DISABLE)
-#define HAL_MDF_MODULE_ENABLED                 /* Multi-function digital filter */
-#endif
-
-/* things specific to higher-end SoC devices with Graphics Core */
-#if defined(STM32U5F9x) || defined(STM32U5G9x) || defined(STM32U5F7x) || defined(STM32U5G7x)
-
+#define HAL_DCACHE_MODULE_ENABLED
+#define HAL_DCMI_MODULE_ENABLED
+#define HAL_DMA_MODULE_ENABLED
 #define HAL_DMA2D_MODULE_ENABLED
+#define HAL_DSI_MODULE_ENABLED
+#define HAL_EXTI_MODULE_ENABLED
+#define HAL_FDCAN_MODULE_ENABLED
+#define HAL_FLASH_MODULE_ENABLED
+#define HAL_FMAC_MODULE_ENABLED
 #define HAL_GFXMMU_MODULE_ENABLED
 #define HAL_GFXTIM_MODULE_ENABLED
+#define HAL_GPIO_MODULE_ENABLED
 #define HAL_GPU2D_MODULE_ENABLED
+#define HAL_GTZC_MODULE_ENABLED
+#define HAL_HASH_MODULE_ENABLED
+#define HAL_HCD_MODULE_ENABLED
+#define HAL_I2C_MODULE_ENABLED
+#define HAL_ICACHE_MODULE_ENABLED
+#define HAL_IRDA_MODULE_ENABLED
+#define HAL_IWDG_MODULE_ENABLED
 #define HAL_JPEG_MODULE_ENABLED
+#define HAL_LPTIM_MODULE_ENABLED
 #define HAL_LTDC_MODULE_ENABLED
-
-#endif
-
-#define HAL_PCD_MODULE_ENABLED   /* Full-speed USB */
-#define HAL_HCD_MODULE_ENABLED   /* high speed USB */
-
-//#define HAL_HASH_MODULE_ENABLED  /* Hash processor */
-//#define HAL_PKA_MODULE_ENABLED   /* Public Key Accelerator */
-
-
-/* Things that are not used very often ------------------------------------ */
-
-//#define HAL_IRDA_MODULE_ENABLED
-//#define HAL_MMC_MODULE_ENABLED                   /* Multi-Media Card interface */
-//#define HAL_PSSI_MODULE_ENABLED                  /* Parallel sync-slave interface */
-//#define HAL_NAND_MODULE_ENABLED
-//#define HAL_NOR_MODULE_ENABLED
-//#define HAL_OPAMP_MODULE_ENABLED
-//#define HAL_OTFDEC_MODULE_ENABLED
-//#define HAL_RAMCFG_MODULE_ENABLED
-//#define HAL_SAI_MODULE_ENABLED
-//#define HAL_SD_MODULE_ENABLED
-//#define HAL_SMARTCARD_MODULE_ENABLED
-//#define HAL_SMBUS_MODULE_ENABLED
-//#define HAL_SRAM_MODULE_ENABLED                  /* Flex Static memeory controller */
-//#define HAL_TSC_MODULE_ENABLED                   /* Touch sensing */
-//#define HAL_DSI_MODULE_ENABLED                   /* DSI Host Interface */
-//#define HAL_DCMI_MODULE_ENABLED                  /* DCMI (digital Camera) interface */
-
+#define HAL_MDF_MODULE_ENABLED
+#define HAL_MMC_MODULE_ENABLED
+#define HAL_NAND_MODULE_ENABLED
+#define HAL_NOR_MODULE_ENABLED
+#define HAL_OPAMP_MODULE_ENABLED
+#define HAL_OSPI_MODULE_ENABLED
+#define HAL_OTFDEC_MODULE_ENABLED
+#define HAL_PCD_MODULE_ENABLED
+#define HAL_PKA_MODULE_ENABLED
+#define HAL_PSSI_MODULE_ENABLED
+#define HAL_PWR_MODULE_ENABLED
+#define HAL_RAMCFG_MODULE_ENABLED
+#define HAL_RCC_MODULE_ENABLED
+#define HAL_RNG_MODULE_ENABLED
+#define HAL_RTC_MODULE_ENABLED
+#define HAL_SAI_MODULE_ENABLED
+#define HAL_SD_MODULE_ENABLED
+#define HAL_SDIO_MODULE_ENABLED
+#define HAL_SMARTCARD_MODULE_ENABLED
+#define HAL_SMBUS_MODULE_ENABLED
+#define HAL_SPI_MODULE_ENABLED
+#define HAL_SRAM_MODULE_ENABLED
+#define HAL_TIM_MODULE_ENABLED
+#define HAL_TSC_MODULE_ENABLED
+#define HAL_UART_MODULE_ENABLED
+#define HAL_USART_MODULE_ENABLED
+#define HAL_WWDG_MODULE_ENABLED
+#define HAL_XSPI_MODULE_ENABLED
 
 /* ########################## Oscillator Values adaptation ####################*/
 /**
@@ -208,7 +145,6 @@ extern "C" {
 vary depending on the variations in voltage and temperature.*/
 
 #if !defined  (LSI_STARTUP_TIMEOUT)
-#define LSI_STARTUP_TIMEOUT    130UL      /*!< Time out for LSI start up, in ms */
 #define LSI_STARTUP_TIMEOUT    130UL      /*!< Time out for LSI start up, in us */
 #endif /* LSI_STARTUP_TIMEOUT */
 
@@ -319,7 +255,6 @@ vary depending on the variations in voltage and temperature.*/
 #define USE_SPI_CRC                   1U
 
 /* ################## SDMMC peripheral configuration ######################### */
-
 #define USE_SD_TRANSCEIVER            0U
 
 /* ################## SDIO peripheral configuration ########################## */
